@@ -738,6 +738,7 @@ input:-moz-placeholder {
 .b-comments {
 	background: #F6F8FA;
 	padding-top: 70px;
+	overflow: hidden;
 }
 .b-comments .b-block h2{
 	margin-bottom: 20px;
@@ -791,18 +792,18 @@ input:-moz-placeholder {
 		}
 		.b-comments .mightyslider_modern_skin.horizontal .mSPrev {
 			background: url("../i/arrow-l.png") no-repeat;
-			background-position: 0% 50%;
-			left: 50%;
-			top: -140px;
 			margin-left: -480px;
-			opacity: 1;
 		}
 		.b-comments .mightyslider_modern_skin.horizontal .mSNext{
 			background: url("../i/arrow-r.png") no-repeat;
-			background-position: 0% 50%;
+			margin-left: 420px;
+		}
+		.b-comments .mightyslider_modern_skin.horizontal .mSPrev,
+		.b-comments .mightyslider_modern_skin.horizontal .mSNext{
+			background-position: 50% 50%;
 			left: 50%;
+			width: 60px;
 			top: -140px;
-			margin-left: 480px;
 			opacity: 1;
 		}
 .b-team {
