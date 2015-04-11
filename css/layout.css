@@ -103,7 +103,8 @@ ul.hor li {
 .b-absolute{
 	position: absolute;
 	left: 50%;
-	margin-left: -500px;
+	top: 0px;
+	margin-left: -480px;
 }
 input::-webkit-input-placeholder {
 	color: #434343;
@@ -639,12 +640,15 @@ input:-moz-placeholder {
 				color: rgba(255,255,255,0.42);
 			}
 .b-sub-menu {
-	background-color: #57DF89;
+	position: relative;
 	font-size: 0;
-	padding: 12px 0;
 }
+	.b-sub-menu canvas{
+		height: 63px;
+		width: 100%;
+	}
 	.b-sub-menu .b-block{
-
+		top: 12px;
 	}
 		.b-sub-menu .b-block ul{
 			margin-left: 205px;

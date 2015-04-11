@@ -54,12 +54,12 @@ var $example = $('#slider'),
     }); 
 
 
-var grad = null,
-    body = document.getElementsByTagName('body')[0],
-    color = 255,
-    ctx = [];
+    var grad = null,
+        body = document.getElementsByTagName('body')[0],
+        color = 255,
+        ctx = [];
     
-    for( var i = 0 ; i <= 2 ; i++ ){
+    for( var i = 0 ; i < document.getElementsByTagName('canvas').length ; i++ ){
         var canvas = document.getElementsByTagName('canvas')[i],
             ct = canvas.getContext('2d');
         ctx.push(ct);
@@ -67,7 +67,7 @@ var grad = null,
         ctx[i].save();
 
         // создание радиального градиента
-        grad = ctx[i].createRadialGradient(0,0,0,0,0,1000); 
+        grad = ctx[i].createLinearGradient(0,0,0,0); 
         grad.addColorStop(0, '#DFDFDF');
         grad.addColorStop(1, 'rgb(' + color + ', ' + color + ', ' + color + ')');
 
@@ -82,10 +82,10 @@ var grad = null,
     };
 
     function updateGradient(xx,yy){
-        for( var i = 0 ; i <= 2 ; i++ ){
+        for( var i = 0 ; i < document.getElementsByTagName('canvas').length ; i++ ){
             var width = window.innerWidth, 
                 height = window.innerHeight, 
-                x = xx-width/3*i, 
+                x = xx, 
                 y = yy,
                 rx = x,
                 ry = y;
@@ -93,9 +93,10 @@ var grad = null,
             var xc = ~~(256 * x / width);
             var yc = ~~(256 * y / height);
 
-            grad = ctx[i].createRadialGradient(rx, ry, 0, rx, ry, width);  //размер мышки
-            grad.addColorStop(0, '#478CFB'); //цвет мышки
-            grad.addColorStop(1, ['rgb(', (150 - xc), ', ', xc, ', ', yc, ')'].join(''));
+            grad = ctx[i].createLinearGradient(0, 0, width, 0);  //размер мышки
+            grad.addColorStop(0, ['rgb(', ~~(yc/2)+50, ', ', (255 - xc), ', ', xc, ')'].join(''));
+            grad.addColorStop(0.5, ['rgb(', xc, ', ', ~~(yc/2)+50, ', ', (255 - xc), ')'].join(''));
+            grad.addColorStop(1, ['rgb(', (255 - xc), ', ', xc, ', ', ~~(yc/2)+50, ')'].join(''));
 
             ctx[i].fillStyle = grad;
             ctx[i].fillRect(0,0,width,height);
