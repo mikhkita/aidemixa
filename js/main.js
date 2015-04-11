@@ -107,6 +107,12 @@ var $example = $('#slider'),
 
 $(document).ready(function(){
     if( $(".b-sub-menu canvas").length ){
+        // function resize(){
+        //     $("ul.slideelement li").css("width",$("body").width()+);       
+        // }
+        // $(window).resize(resize);
+        // resize();
+
         var grad = null,
             body = document.getElementsByTagName('body')[0],
             color = 255,
@@ -125,9 +131,19 @@ $(document).ready(function(){
 
         updateGradient1(window.innerWidth/3,window.innerHeight/2);
 
-        body.onmousemove = function (event) {
-            updateGradient1(event.clientX,event.clientY);
-        };
+        // body.onmousemove = function (event) {
+        //     updateGradient1(event.clientX,event.clientY);
+        // };
+
+        $(".b-sub-menu").mousemove(function(e){
+            var mX = event.clientX,
+                w = $("body").width(),
+                p = -(50-50*(mX/w));
+            $(".b-sub-menu canvas").css({
+                "margin-left" : p+"%"
+            });
+            console.log(p);
+        });
 
         function updateGradient1(xx,yy){
             for( var i = 0 ; i < $(".b-sub-menu canvas").length ; i++ ){
@@ -143,10 +159,10 @@ $(document).ready(function(){
                 console.log(width);
                 grad = ctx[i].createLinearGradient(0, 0, 255, 0);  //размер мышки
                 grad.addColorStop(0, 'rgb(87, 223, 137)');
-                grad.addColorStop(0.25, 'rgb(63, 221, 215)');
-                grad.addColorStop(0.43, 'rgb(60, 172, 236)');
-                grad.addColorStop(0.58, 'rgb(104, 54, 228)');
-                grad.addColorStop(0.70, 'rgb(147, 59, 228)');
+                grad.addColorStop(0.20, 'rgb(63, 221, 215)');
+                grad.addColorStop(0.40, 'rgb(60, 172, 236)');
+                grad.addColorStop(0.60, 'rgb(104, 54, 228)');
+                grad.addColorStop(0.75, 'rgb(147, 59, 228)');
                 grad.addColorStop(1, 'rgb(216, 64, 246)');
                 // grad.addColorStop(0, ['rgb(', ~~(yc/2)+50, ', ', (255 - xc), ', ', xc, ')'].join(''));
                 // grad.addColorStop(0.5, ['rgb(', xc, ', ', ~~(yc/2)+50, ', ', (255 - xc), ')'].join(''));

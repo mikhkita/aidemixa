@@ -152,7 +152,7 @@ input:-moz-placeholder {
 			.b-1 .b-block .b-menu li{
 				font-family: "PNR";
 				text-transform: uppercase;
-				font-weight: 700;
+				/*font-weight: 700;*/
 				font-size: 14px;
 				margin-right: 10px;
 				letter-spacing: 0.8px;
@@ -625,7 +625,8 @@ input:-moz-placeholder {
 }
 	.b-sub-menu canvas{
 		height: 63px;
-		width: 100%;
+		width: 150%;
+		margin-left: -25%;
 	}
 	.b-sub-menu .b-block{
 		top: 12px;
