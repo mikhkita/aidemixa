@@ -34,6 +34,9 @@ a{
 li{
 	list-style: none;
 }
+svg{
+	overflow: visible;
+}
 h1,h2,h3,h4,h5,h6{
 	font-weight: 500;
 }
@@ -701,6 +704,33 @@ input:-moz-placeholder {
   					background-repeat: no-repeat;
   					margin-bottom: 50px;
 				}
+					.b-about .b-block ul li div div{
+						display: inline-block;
+					}
+					.b-about .b-block ul li div #iphone{
+						margin-top: 2px;
+  						margin-left: 2px;
+					}
+					.b-about .b-block ul li div #star{
+						margin-top: 1px;
+  						margin-left: 2px;
+					}
+					.b-about .b-block ul li div #graph{
+						margin-top: 9px;
+  						margin-left: 2px;
+					}
+					.b-about .b-block ul li div #like{
+						margin-top: 12px;
+  						margin-left: 2px;
+					}
+					.b-about .b-block ul li div #settings{
+						margin-top: 10px;
+  						margin-left: 2px;
+					}
+					.b-about .b-block ul li div #man{
+						margin-top: 5px;
+  						margin-left: 2px;
+					}
 .b-comments {
 	background: #F6F8FA;
 	padding-top: 70px;
