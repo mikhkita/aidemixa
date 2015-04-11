@@ -98,7 +98,6 @@ ul.hor li {
 	position: relative;
 	width: 960px;
 	margin: 0px auto;
-	padding: 0 20px 0 20px;
 }
 .b-absolute{
 	position: absolute;
@@ -651,12 +650,12 @@ input:-moz-placeholder {
 		top: 12px;
 	}
 		.b-sub-menu .b-block ul{
-			margin-left: 205px;
-			
+			/*margin-left: 205px;*/
+			display: inline-block;
+			margin-left: 50px;
 		}
 			.b-sub-menu .b-block ul li{
-			margin-right: 38px;
-			
+				margin: 0px 19px;
 			}
 			.b-sub-menu .b-block ul li a{
 				display: block;
