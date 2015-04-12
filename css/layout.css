@@ -22,6 +22,7 @@ body {
 	position: relative;
 }
 body {
+	-webkit-text-size-adjust: none;
 	min-width: 1000px;
 	text-align: center;
 	font-family: 'PNR';
@@ -622,6 +623,7 @@ input:-moz-placeholder {
 .b-sub-menu {
 	position: relative;
 	font-size: 0;
+	overflow: hidden;
 }
 	.b-sub-menu canvas{
 		height: 63px;
@@ -649,6 +651,9 @@ input:-moz-placeholder {
 				border-radius: 40px;
 			  	padding: 11px 24px;
 			}
+				.b-sub-menu .b-block ul li a:hover{
+					/*хуй знает что писать*/
+				}
 			.b-sub-menu .b-block ul li.active a{
 				border: 2px solid rgba(255,255,255,0.40);
 			  	padding: 9px 22px;
