@@ -102,6 +102,41 @@ var $example = $('#slider'),
             }
         }
     }
+
+
+
+    var myPlace = new google.maps.LatLng(56.433537, 84.988520);
+    var myOptions = {
+        zoom: 4,
+        center: myPlace,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.LARGE,
+            position: google.maps.ControlPosition.LEFT_CENTER
+        }
+    }
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(56.433537, 84.988520),
+        map: map,
+        title: "Томск"
+    });
+    marker = new google.maps.Marker({
+        position: new google.maps.LatLng(55.769229, 37.723798),
+        map: map,
+        title: "Москва"
+    });
+    marker = new google.maps.Marker({
+        position: new google.maps.LatLng(59.904430, 30.384931),
+        map: map,
+        title: "Санкт-Петербург"
+    });
+
+
 });
 
 
