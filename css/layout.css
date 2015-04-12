@@ -510,6 +510,13 @@ input:-moz-placeholder {
     					filter: gray; /* IE6-9 */
     					-webkit-filter: grayscale(100%);
 					}
+.b-map{
+	background-color: #000 !important;
+	height:536px;
+}
+	.b-map>div:first-child>div:first-child>div:first-child>div:last-child{
+		opacity: 0.5;
+	}
 .b-7 {
 	padding-top: 70px;
 	padding-bottom: 30px;
