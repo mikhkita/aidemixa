@@ -105,14 +105,14 @@ var $example = $('#slider'),
 
 
 
-    var myPlace = new google.maps.LatLng(56.433537, 84.988520);
+    var myPlace = new google.maps.LatLng(51.638608, 6.619120);
     var myOptions = {
-        zoom: 4,
+        zoom: 3,
         center: myPlace,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         disableDefaultUI: true,
         scrollwheel: false,
-        zoomControl: true,
+        zoomControl: false,
         zoomControlOptions: {
             style: google.maps.ZoomControlStyle.LARGE,
             position: google.maps.ControlPosition.LEFT_CENTER
@@ -120,20 +120,29 @@ var $example = $('#slider'),
     }
     var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
 
-    var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(56.433537, 84.988520),
-        map: map,
-        title: "Томск"
+    var marker = new MarkerWithLabel({
+       position: new google.maps.LatLng(56.433537, 84.988520),
+       map: map,
+       icon: "i/map-point.png",
+       labelContent: "Томск",
+       labelAnchor: new google.maps.Point(-10, 16),
+       labelClass: "map-point"
     });
-    marker = new google.maps.Marker({
-        position: new google.maps.LatLng(55.769229, 37.723798),
-        map: map,
-        title: "Москва"
+    marker = new MarkerWithLabel({
+       position: new google.maps.LatLng(55.769229, 37.723798),
+       map: map,
+       icon: "i/map-point.png",
+       labelContent: "Москва",
+       labelAnchor: new google.maps.Point(-10, 16),
+       labelClass: "map-point"
     });
-    marker = new google.maps.Marker({
-        position: new google.maps.LatLng(59.904430, 30.384931),
-        map: map,
-        title: "Санкт-Петербург"
+    marker = new MarkerWithLabel({
+       position: new google.maps.LatLng(59.904430, 30.384931),
+       map: map,
+       icon: "i/map-point.png",
+       labelContent: "Санкт-Петербург",
+       labelAnchor: new google.maps.Point(-10, 16),
+       labelClass: "map-point"
     });
 
 

@@ -129,7 +129,11 @@ input:-moz-placeholder {
 		background-color: #35CFFA;
 		color: #FFF;
 	}
-
+.map-point {
+	color: #fff;
+	font-size: 16px;
+	font-family: "PNR";
+}
 .b-1{
 	
 }
@@ -510,13 +514,29 @@ input:-moz-placeholder {
     					filter: gray; /* IE6-9 */
     					-webkit-filter: grayscale(100%);
 					}
-.b-map{
-	background-color: #000 !important;
-	height:536px;
+.b-map-cont {
+
 }
-	.b-map>div:first-child>div:first-child>div:first-child>div:last-child{
-		opacity: 0.5;
+	.b-map-cont h2{
+		position: absolute;
+		font-family: "PNR";
+		color: #fff;
+		width: 100%;
+		height: 44px;
+		padding-top: 40px;
+		padding-bottom: 12px;
+		background: linear-gradient(to bottom, rgba(0,0,0,0.41), rgba(0,0,0,0));
+		z-index: 1;
 	}
+	.b-map{
+		background-color: #000 !important;
+		height:536px;
+		position: relative;
+	}
+		.b-map>div:first-child>div:first-child>div:first-child>div:last-child{
+			opacity: 0.5;
+		}
+
 .b-7 {
 	padding-top: 70px;
 	padding-bottom: 30px;
