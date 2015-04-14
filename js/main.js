@@ -42,6 +42,28 @@ var $example = $('#slider'),
         speed: 500,
         easing: 'swing',
         preloadMode:  'all',
+        cycling: {
+            cycleBy:       'slides', // Enable automatic cycling by 'slides' or 'pages'.
+            pauseTime:     5000, // Delay between cycles in milliseconds.
+            loop:          1,    // Repeat cycling when last slide/page is activated.
+            pauseOnHover:  1    // Pause cycling when mouse hovers over the FRAME.
+        }
+    }); 
+    
+    $example = $('#slider-project');
+    $frame = $('.frame', $example);
+
+    $frame.mightySlider({
+        navigation: {
+            keyboardNavBy: 'slides'
+        },
+        commands: {
+            pages: 1,
+            buttons: 1
+        },
+        speed: 500,
+        easing: 'swing',
+        preloadMode:  'all',
         pages: {
             activateOn: 'click'
         },
@@ -52,7 +74,6 @@ var $example = $('#slider'),
             pauseOnHover:  1    // Pause cycling when mouse hovers over the FRAME.
         }
     }); 
-
     if( $("#b-classificate li canvas").length ){
         var grad = null,
             body = document.getElementsByTagName('body')[0],
