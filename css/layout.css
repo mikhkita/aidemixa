@@ -16,6 +16,30 @@
     font-style: normal;
     font-weight: normal;
 }
+@font-face {
+    font-family: 'PNL';
+    src: url('../fonts/proximanova-light.eot');
+    src: url('../fonts/proximanova-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-light.woff2') format('woff2'),
+         url('../fonts/proximanova-light.woff') format('woff'),
+         url('../fonts/proximanova-light.ttf') format('truetype'),
+         url('../fonts/proximanova-light.svg#proxima_nova_ltlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'PNCB';
+    src: url('../fonts/proximanovacond-bold.eot');
+    src: url('../fonts/proximanovacond-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanovacond-bold.woff2') format('woff2'),
+         url('../fonts/proximanovacond-bold.woff') format('woff'),
+         url('../fonts/proximanovacond-bold.ttf') format('truetype'),
+         url('../fonts/proximanovacond-bold.svg#proxima_nova_cn_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html,
 body {
@@ -49,8 +73,8 @@ label.error{
 	display: none !important;
 }
 input.error,textarea.error{
-	background-color: #FFCECE !important;
-	box-shadow: 0 1px 2px rgba(180, 14, 14, 0.57);
+	background-color: #FFF7F7 !important;
+  	border: 1px solid #E2B5B5 !important;
 }
 .ps-lines{
 	display: none;
@@ -106,17 +130,17 @@ ul.hor li {
 	top: 0px;
 	margin-left: -480px;
 }
-input::-webkit-input-placeholder {
-	color: #434343;
+::-webkit-input-placeholder {
+	color: #505050;
 }
-input:-moz-placeholder {
-	color: #434343;
+:-moz-placeholder {
+	color: #505050;
 }
 .b-orange-butt{
 	font-family: "PNB";
 	display: inline-block;
 	background: #00B0E2;
-	box-shadow: 0px 3px 0px 0px #008CB4;
+	border-bottom: 3px solid #008CB4;
 	border-radius: 40px;
 	font-size: 12px;
 	color: rgba(255,255,255,0.85);
@@ -129,11 +153,74 @@ input:-moz-placeholder {
 		background-color: #35CFFA;
 		color: #FFF;
 	}
+	.b-orange-butt:active{
+		border-bottom: 3px solid #35CFFA !important;
+	}
 .map-point {
 	color: #fff;
 	font-size: 16px;
 	font-family: "PNR";
 }
+.fancybox-close {
+	display: none;
+}
+.b-popup {
+	width: 349px;
+	padding: 22px 56px 39px;
+	background: #FFFFFF;
+	box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15), inset 0px -3px 0px 0px rgba(0,0,0,0.20);
+	border-radius: 4px;
+}
+	.b-popup h3{
+	font-size: 24px;
+	font-family: "PNB";
+	color: #505050;
+	margin-bottom: 30px;
+	}
+		.b-popup svg {
+			position: absolute;
+			right: 22px;
+			top: 22px;
+			cursor: pointer;
+		}
+	.b-popup form{
+
+	}
+		.b-popup input[type="text"],.b-popup textarea{
+			margin-bottom: 30px;
+			width: 312px;
+			border: 1px solid #D1D2CA;
+			border-radius: 5px;
+			font-family: "PNR";
+			font-size: 16px;	
+			color: #505050;
+			line-height: 20px;
+			padding: 14px;
+		}
+		.b-popup textarea{
+			height: 119px;
+			resize: none;
+		}
+		.b-popup label{
+			display: block;
+			float: left;
+			font-size: 14px;
+			font-family: "PNCB";
+			cursor: pointer;
+		}
+			.b-popup label img{
+				margin-right: 9px;
+			}
+		.b-popup .b-orange-butt{
+			margin-top: -5px;
+			margin-left: 72px;
+			float: left;
+			width: 147px;
+			border: none;
+			background: #35CFFA;
+  			border-bottom: 3px solid #008CB4;
+		}
+
 .b-1{
 	
 }
@@ -308,7 +395,7 @@ input:-moz-placeholder {
 
 	}
 		.b-3 .b-block h2{
-			font-family: "PNR";
+			font-family: "PNL";
 			margin-bottom: 27px;
 			line-height: 44px;
 		}
@@ -388,10 +475,13 @@ input:-moz-placeholder {
 					.b-4 .b-block ul li a h2{ 
 						display: block;
 						margin-top: 122px;
-						text-decoration: underline;
+						
 						vertical-align: middle;
 						font-size: 16px;
 						color: #fff;
+					}
+					.b-4 .b-block ul li a h2:hover{ 
+						text-decoration: underline;
 					}
 		.b-4 .b-block .b-orange-butt{
 			width: 248px;
@@ -603,12 +693,6 @@ input:-moz-placeholder {
   				top: 2px;
   				background-image: url('../i/skype.png');
 			}
-				.b-7 .b-block .contacts .left .skype span{
-	  				position: absolute;
-	  				font-size: 11px;	
-	  				left: -23px;
-	  				top: 4px;
-				}
 			.b-7 .b-block .contacts .left .map:after{
 				width: 14px;
   				height: 18px;
@@ -784,11 +868,13 @@ input:-moz-placeholder {
 		}
 			.b-comments .mightySlider .photo{
 				width: 100px;
-				height: 100px;
-				background: black;
-				border-radius: 50px;
-				display: table-cell;
-				vertical-align: middle;
+  				height: 100px;
+  				border-radius: 50px;
+  				background: url("../i/b-4/2.jpg") no-repeat;
+  				background-position: 50%;
+  				background-size: cover;
+  				display: table-cell;
+  				vertical-align: middle;
 			}
 			.b-comments .mightySlider h3{
 				width: 700px;
