@@ -1084,6 +1084,9 @@ ul.hor li {
 .b-slider-project {
 	padding-top: 94px;
 }
+.b-slider-project.android .mightyslider_modern_skin .mSPages li:nth-child(1){
+	background-image: url("../i/project/android.png");
+}
 	.b-slider-project .mightyslider_modern_skin{
 		background: #fff;
 	}
@@ -1152,7 +1155,7 @@ ul.hor li {
     			-webkit-filter: grayscale(100%);
 
 			}
-			.b-slider-project .mightyslider_modern_skin .mSPages li:first-child{
+			.b-slider-project .mightyslider_modern_skin .mSPages li:nth-child(1){
 				background-image: url("../i/project/apple.png");
 			}
 			.b-slider-project .mightyslider_modern_skin .mSPages li:nth-child(2){		
