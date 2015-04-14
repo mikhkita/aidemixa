@@ -177,12 +177,16 @@ ul.hor li {
 	color: #505050;
 	margin-bottom: 30px;
 	}
-		.b-popup svg {
-			position: absolute;
-			right: 22px;
-			top: 22px;
-			cursor: pointer;
-		}
+	.b-popup svg {
+		position: absolute;
+		right: 22px;
+		top: 22px;
+		cursor: pointer;
+	}
+	.b-popup svg:hover .svg {
+		stroke: #00B0E2;
+		unicode-bidi: 
+	}
 	.b-popup form{
 
 	}
@@ -1037,7 +1041,39 @@ ul.hor li {
 			.b-instruments .b-block ul li h4.str{
 				padding-top: 14px;
 			}
-
+.b-project-fullimg {
+	height: 320px;
+	width: 100%;
+	background-size: cover;
+	background-position: 50% 0%;
+	
+}
+	.b-project-fullimg .b-block {
+		height: inherit;
+	}
+		.b-project-fullimg .b-block .desc-cont {
+			display: inline-block;
+			height: inherit;
+			
+		}
+			.b-project-fullimg .b-block .icon{
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-image: url('../i/play.pn');
+				width: 87px;
+				height: 87px;
+				background-size: 87px;
+			}
+			.b-project-fullimg .b-block .title{
+				margin-left: 20px;
+			}
+				.b-project-fullimg .b-block .title h3{
+					font-family: "PNR";
+					font-weight: 300;
+					font-size: 64px;
+					color: #FFFFFF;
+					line-height: 76px;
+				}
 @media screen and (max-width: 1250px){
 	
 }
