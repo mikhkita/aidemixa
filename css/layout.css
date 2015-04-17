@@ -1371,6 +1371,7 @@ ul.hor li {
 		}
 		.b-prj-func .b-block>div img{
 			max-width: 100%;
+			height: auto !important;
 		}
 		.b-prj-func .b-block.b-left div:nth-child(2),.b-prj-func .b-block.b-right div:nth-child(1){
 			text-align: center;
