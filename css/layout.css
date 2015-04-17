@@ -144,6 +144,7 @@ ul.hor li {
 .text {
 	font-size: 18px;
 	color: #84868E;
+	line-height: 28px;
 }
 .underline{
 	text-decoration: underline;
@@ -1322,6 +1323,9 @@ ul.hor li {
 	.b-prj-desc .b-block {
 		text-align: left;
 	}
+	.b-prj-desc .b-block h2{
+		margin-bottom: 27px;
+	}
 	.b-prj-desc .b-block p{
 		width: 490px;
 		margin-right: 43px;
@@ -1456,6 +1460,150 @@ ul.hor li {
 .b-projects.b-proj-no-padding {
 	padding-bottom: 0;
 }
+.b-contacts {
+	padding-top: 70px;
+	padding-bottom: 73px;
+	background: #F6F8FA;
+}
+	.b-contacts .b-block {
+		
+	}
+		.b-contacts .b-block h2{
+			display: none;
+		}
+		.b-contacts .b-block .contacts{
+			color: #4B4B4B;
+			text-align: left;
+
+		}
+		.b-contacts .b-block .contacts .left{
+			width: 390px;
+			padding-left: 90px;
+		}
+			.b-contacts .b-block .contacts .left a{
+						
+			}
+			.b-contacts .b-block .contacts .left>a,
+			.b-contacts .b-block .contacts .left>div,
+			.b-contacts .b-block .contacts .right h3,
+			.b-contacts .b-block .contacts .right h4{
+				display: block;
+				position: relative;
+			}
+			.b-contacts .b-block .contacts .left a:hover{
+				text-decoration: underline;
+			}
+			.b-contacts .b-block .contacts .left>a:after,
+			.b-contacts .b-block .contacts .left>div:after,
+			.b-contacts .b-block .contacts .right h3:after,
+			.b-contacts .b-block .contacts .right h4:after{
+				display: block;
+  				color: #fff;
+  				position: absolute;
+  				content: "s";
+  				font-size: 0px;
+  				background-position: 50% 50%;
+  				background-repeat: no-repeat;
+  				background-size: cover;
+			}
+			.b-contacts .b-block .contacts .left .mail-1:after,.b-contacts .b-block .contacts .left .mail-2:after{
+				width: 20px;
+  				height: 14px;
+  				left: -30px;
+  				top: 7px;
+  				background-image: url('../i/b-contacts/c-mail.png');
+			}
+			.b-contacts .b-block .contacts .left .mail-2 div{
+				display: inline-block !important;
+			}
+			.b-contacts .b-block .contacts .left .mail-1,.b-contacts .b-block .contacts .left .mail-2{
+				font-size: 22px;
+				margin-bottom: 20px;
+			}
+			.b-contacts .b-block .contacts .left .mail-2{
+				margin-bottom: 40px;
+			}
+			.b-contacts .b-block .contacts .left .skype{
+				font-size: 20px;
+				color: #4B4B4B;
+				margin-bottom: 17px;
+			}
+			.b-contacts .b-block .contacts .left .fb{
+				font-size: 20px;
+
+			}
+			.b-contacts .b-block .contacts .left .skype:after{
+				width: 22px;
+  				height: 20px;
+  				left: -32px;
+  				top: 2px;
+  				background-image: url('../i/b-contacts/c-skype.png');
+			}
+			.b-contacts .b-block .contacts .left .fb {
+				color: #4B4B4B;
+			}
+			.b-contacts .b-block .contacts .left .fb:after{
+				width: 10px;
+  				height: 18px;
+  				left: -26px;
+  				top: 2px;
+  				background-image: url('../i/b-contacts/c-fb.png');
+			}	
+		.b-contacts .b-block .contacts .right{
+			width: 446px;
+			float: left !important;
+			padding-left: 34px;
+		}	
+			.b-contacts .b-block .contacts .right h3{
+				font-family: "PNS";
+				font-size: 24px;
+				margin-bottom: 39px;
+			}	
+				.b-contacts .b-block .contacts .right h3:after{
+					width: 19px;
+	  				height: 27px;
+	  				left: -32px;
+	  				top: 0;
+	  				background-image: url('../i/b-contacts/c-map.png');
+				}
+			.b-contacts .b-block .contacts .right h4{
+				font-family: "PNS";
+				font-size: 24px;
+				margin-bottom: 5px;
+			}
+				.b-contacts .b-block .contacts .right h4:after {
+					width: 21px;
+	  				height: 21px;
+	  				left: -32px;
+	  				top: 4px;
+	  				background-image: url('../i/b-contacts/c-phone.png');
+				}
+			.b-contacts .b-block .contacts .right h5{
+				font-size: 16px;
+				color: rgba(0,0,0,0.42);
+			}
+#b-contacts-map {
+	height: 447px;
+	width: 100%;
+}
+.contacts-map-point {
+	color: rgb(130, 1, 1);
+	font-weight: bold;
+	font-size: 14px;
+}
+.b-copyright {
+	padding-top: 27px;
+	padding-bottom: 32px;
+}
+	.b-copyright .b-block{
+		text-align: left;
+	}
+		.b-copyright .b-block h3{
+
+			font-size: 12px;
+			color: rgba(0,0,0,0.42);
+			margin-left: 5px;
+		}
 @media screen and (max-width: 1250px){
 	
 }
