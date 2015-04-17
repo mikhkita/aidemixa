@@ -1,33 +1,52 @@
-@font-face {
-    font-family: "PNR";
-    src: url("../fonts/ProximaNovaRegular.eot");
-    src: url("../fonts/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/ProximaNovaRegular.woff") format("woff"),
-    url("../fonts/ProximaNovaRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
+
 @font-face {
     font-family: "PNB";
-    src: url("../fonts/ProximaNovaBold.eot");
-    src: url("../fonts/ProximaNovaBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/ProximaNovaBold.woff") format("woff"),
-    url("../fonts/ProximaNovaBold.ttf") format("truetype");
-    font-style: normal;
+    src: url('../fonts/proxima_nova_bold.eot');
+    src: url('../fonts/proxima_nova_bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima_nova_bold.woff2') format('woff2'),
+         url('../fonts/proxima_nova_bold.woff') format('woff'),
+         url('../fonts/proxima_nova_bold.ttf') format('truetype'),
+         url('../fonts/proxima_nova_bold.svg#PNB') format('svg');
     font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'PNS';
+    src: url('../fonts/proxima_nova_semibold.eot');
+    src: url('../fonts/proxima_nova_semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima_nova_semibold.woff2') format('woff2'),
+         url('../fonts/proxima_nova_semibold.woff') format('woff'),
+         url('../fonts/proxima_nova_semibold.ttf') format('truetype'),
+         url('../fonts/proxima_nova_semibold.svg#PNS') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PNR';
+    src: url('../fonts/proxima_nova_regular.eot');
+    src: url('../fonts/proxima_nova_regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima_nova_regular.woff2') format('woff2'),
+         url('../fonts/proxima_nova_regular.woff') format('woff'),
+         url('../fonts/proxima_nova_regular.ttf') format('truetype'),
+         url('../fonts/proxima_nova_regular.svg#PNR') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'PNL';
-    src: url('../fonts/proximanova-light.eot');
-    src: url('../fonts/proximanova-light.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/proximanova-light.woff2') format('woff2'),
-         url('../fonts/proximanova-light.woff') format('woff'),
-         url('../fonts/proximanova-light.ttf') format('truetype'),
-         url('../fonts/proximanova-light.svg#proxima_nova_ltlight') format('svg');
+    src: url('../fonts/proxima_nova_light.eot');
+    src: url('../fonts/proxima_nova_light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima_nova_light.woff2') format('woff2'),
+         url('../fonts/proxima_nova_light.woff') format('woff'),
+         url('../fonts/proxima_nova_light.ttf') format('truetype'),
+         url('../fonts/proxima_nova_light.svg#PNL') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
+
 @font-face {
     font-family: 'PNCB';
     src: url('../fonts/proximanovacond-bold.eot');
@@ -36,18 +55,6 @@
          url('../fonts/proximanovacond-bold.woff') format('woff'),
          url('../fonts/proximanovacond-bold.ttf') format('truetype'),
          url('../fonts/proximanovacond-bold.svg#proxima_nova_cn_rgbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'PNSB';
-    src: url('../fonts/proxima_nova_semibold.eot');
-    src: url('../fonts/proxima_nova_semibold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/proxima_nova_semibold.woff2') format('woff2'),
-         url('../fonts/proxima_nova_semibold.woff') format('woff'),
-         url('../fonts/proxima_nova_semibold.ttf') format('truetype'),
-         url('../fonts/proxima_nova_semibold.svg#proxima_nova_ltsemibold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -290,7 +297,7 @@ ul.hor li {
 			padding-left: 12px;
 		}
 			.b-header .b-block .b-menu li{
-				font-family: "PNSB";
+				font-family: "PNS";
 				text-transform: uppercase;
 				font-size: 14px;
 				margin-right: 10px;
@@ -515,14 +522,6 @@ ul.hor li {
 					left: 0;
 					top: -283px;
 					background-color: rgba(0,117,149,0.8);
-					-webkit-transition: all 300ms ease-in-out;
-					   -moz-transition: all 300ms ease-in-out;
-					    -ms-transition: all 300ms ease-in-out;
-					   	 -o-transition: all 300ms ease-in-out;
-							transition: all 300ms ease-in-out;
-				}
-				.b-projects .b-block ul li:hover a{
-					top: 0px;
 				}
 					.b-projects .b-block ul li a{
 
@@ -580,7 +579,7 @@ ul.hor li {
 						border-radius: 8px 6px 0 0;
 					}
 						.b-classification .b-block ul li div h3{
-							font-family: "PNSB";
+							font-family: "PNS";
 							display: inline-block;
 						  	text-transform: uppercase;
 						  	font-size: 12px;
@@ -592,7 +591,7 @@ ul.hor li {
 						}	
 						.b-classification .b-block ul li div h4{
 							font-size: 37px;
-							font-family: "PNSB";
+							font-family: "PNS";
 							margin-top: 29px;
 						}
 							.b-classification .b-block ul li div h4 span{
@@ -802,7 +801,7 @@ ul.hor li {
   				margin-right: 123px;
   				margin-top: 45px;
   				font-size: 14px;
-  				font-family: "PNSB";
+  				font-family: "PNS";
   				padding: 15px 0 13px;
 			}
 			.b-footer .b-block h5{
@@ -834,7 +833,7 @@ ul.hor li {
 				display: block;
 				color: #fff;
 			  	text-transform: uppercase;
-			  	font-family: "PNSB";
+			  	font-family: "PNS";
 			  	font-size: 14px;
 			  	letter-spacing: 2.49px;
 				line-height: 17px;
@@ -973,7 +972,7 @@ ul.hor li {
 		.b-comments .mightySlider h4{
 			text-align: left;
 			font-size: 16px;
-			font-family: "PNSB";
+			font-family: "PNS";
 			margin-left: 125px;
 		}
 		.b-comments .mightyslider_modern_skin.horizontal .mSPrev {

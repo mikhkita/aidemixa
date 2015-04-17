@@ -157,7 +157,13 @@ var $example = $('#slider'),
             });
         }
     }
-    
+
+    $(".b-projects .b-block ul li").hover(function(){
+        TweenLite.to($(this).find("a"), 0.3, { "top" : 0, ease : Quad.easeInOut } );
+    },function(){
+        TweenLite.to($(this).find("a"), 0.3, { "top" : -283, ease : Quad.easeInOut } );
+    });
+
 });
 
 
