@@ -1197,7 +1197,7 @@ ul.hor li {
 	height: 320px;
 	width: 100%;
 	background-size: cover;
-	background-position: 50% 0%;
+	background-position: 50% 50%;
 	
 }
 	.b-project-fullimg .b-block {
@@ -1220,6 +1220,7 @@ ul.hor li {
 				margin-right: 23px;
 			}
 			.b-project-fullimg .b-block .table .table-cell .desc-cont h3{
+				margin-top: 5px;
 				font-family: "PNR";
 				font-weight: 300;
 				font-size: 64px;
