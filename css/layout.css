@@ -175,7 +175,7 @@ ul.hor li {
 	letter-spacing: 0.8px;
 	line-height: 15px;
 	text-transform: uppercase;
-	padding: 13px 0 11px;
+	padding: 14px 0 11px;
 }
 	.b-orange-butt:hover{
 		background-color: #35CFFA;
@@ -183,8 +183,7 @@ ul.hor li {
 	}
 	.b-orange-butt:active{
 		border-bottom: none;
-	margin-top: 2px;
-	margin-bottom: 1px;
+		margin-top: 3px;
 	}
 .map-point {
 	color: #fff;
@@ -343,6 +342,10 @@ ul.hor li {
 			width: 178px;
 			margin-top: -2px;
 
+		}
+		.b-header .b-block .b-orange-butt:active {
+			margin-top: 1px !important;
+			margin-bottom: 1px !important;
 		}
 .b-slider {
 
@@ -588,11 +591,11 @@ ul.hor li {
 						  	border: 2px solid rgba(255,255,255,0.33);
 						  	border-radius: 40px;
 						  	margin-top: 36px;
-						  	padding: 6px 10px 5px;
+						  	padding: 6px 9px 5px 11px;
 						}	
 						.b-classification .b-block ul li div h4{
 							font-size: 37px;
-							font-family: "PNSB";
+							font-family: "PNB";
 							margin-top: 29px;
 						}
 							.b-classification .b-block ul li div h4 span{
@@ -802,8 +805,11 @@ ul.hor li {
   				margin-right: 123px;
   				margin-top: 45px;
   				font-size: 14px;
-  				font-family: "PNSB";
-  				padding: 15px 0 13px;
+  				font-family: "PNB";
+  				padding: 17px 0 14px;
+			}
+			.b-footer .b-block .contacts .right .b-orange-butt:active {
+				margin-top: 48px;
 			}
 			.b-footer .b-block h5{
 
@@ -1269,8 +1275,8 @@ ul.hor li {
 			margin-bottom: 27px;
 		}
 .b-prj-func {
-	padding-top: 90px;
-	padding-bottom: 90px;
+	padding-top: 55px;
+	padding-bottom: 55px;
 }
 	.b-prj-func .b-block {
 		display: table;
@@ -1299,7 +1305,7 @@ ul.hor li {
 		}
 	.b-prj-func+.b-prj-func {
 		padding-top: 0;
-		margin-top: -210px;
+		margin-top: -180px;
 	}
 @media screen and (max-width: 1250px){
 	
