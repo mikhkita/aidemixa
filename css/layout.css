@@ -567,21 +567,28 @@ ul.hor li {
 					border-radius: 8px;
 					margin-right: 39px;
 				}
-					.b-classification .b-block ul li canvas{
-						height: 179px;
+					.b-classification .b-block ul li .b-canvas-cont{
 						width: 294px;
+						height: 179px;
+						overflow: hidden;
+						position: relative;
 						border-radius: 8px 6px 0 0;
 					}
-					.b-classification .b-block ul li>div{
+						.b-classification .b-block ul li canvas{
+							height: 179px;
+							width: 150%;
+							margin-left: -25%;
+						}
+					.b-classification .b-block ul li .b-desc-cont{
 						width: 100%;
 						position: absolute;
 						left: 0px;
-						top: 0px;;
+						top: 0px;
 						color: #fff;
 						height: 179px;
 						border-radius: 8px 6px 0 0;
 					}
-						.b-classification .b-block ul li div h3{
+						.b-classification .b-block ul li .b-desc-cont h3{
 							font-family: "PNS";
 							display: inline-block;
 						  	text-transform: uppercase;
@@ -592,24 +599,24 @@ ul.hor li {
 						  	margin-top: 36px;
 						  	padding: 6px 9px 5px 11px;
 						}	
-						.b-classification .b-block ul li div h4{
+						.b-classification .b-block ul li .b-desc-cont h4{
 							font-size: 37px;
 							font-family: "PNB";
 							margin-top: 29px;
 						}
-							.b-classification .b-block ul li div h4 span{
+							.b-classification .b-block ul li .b-desc-cont h4 span{
 								font-family: "PNR";
 								font-size: 20px;
 								position: relative;
   								bottom: 14px;
   								right: 5px;
 							}
-							.b-classification .b-block ul li div h4 small{
+							.b-classification .b-block ul li .b-desc-cont h4 small{
 								font-size: 20px;
  								position: relative;
  								left: 3px;
 							}
-							.b-classification .b-block ul li div h4 div{
+							.b-classification .b-block ul li .b-desc-cont h4 div{
 								display: inline;
 							}
 					.b-classification .b-block ul li h5{

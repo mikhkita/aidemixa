@@ -86,37 +86,29 @@ var $example = $('#slider'),
             ctx.push(ct);
             ctx[i].clearRect(0, 0, 1000, 1000);
             ctx[i].save();
-
-            // создание радиального градиента
-            grad = ctx[i].createRadialGradient(0,0,0,0,0,1000); 
-            grad.addColorStop(0, '#DFDFDF');
-            grad.addColorStop(1, 'rgb(' + color + ', ' + color + ', ' + color + ')');
-
-            // сам фон-градиент
-            ctx[i].fillStyle = grad;
         }
 
-        updateGradient(window.innerWidth/3,window.innerHeight/2);
+        updateGradient();
 
-        body.onmousemove = function (event) {
-            updateGradient(event.clientX,event.clientY);
-        };
+        $("#b-classificate li .b-desc-cont").mousemove(function(e){
+            var mX = event.clientX-$(this).offset().left,
+                w = $(this).width(),
+                p = -(50-50*(mX/w));
+            $(this).parents("li").find("canvas").css({
+                "margin-left" : p+"%"
+            });
+            console.log(p);
+        });
 
-        function updateGradient(xx,yy){
+        function updateGradient(){
             for( var i = 0 ; i < $("#b-classificate li canvas").length ; i++ ){
-                var width = window.innerWidth, 
-                    height = window.innerHeight, 
-                    x = xx-width/3*i, 
-                    y = yy,
-                    rx = x,
-                    ry = y;
-                    
-                var xc = ~~(256 * x / width);
-                var yc = ~~(256 * y / height);
+                var el = $("#b-classificate li canvas").eq(i),
+                    width = el.width()+20, 
+                    height = el.height();
 
-                grad = ctx[i].createRadialGradient(rx, ry, 0, rx, ry, width);  //размер мышки
-                grad.addColorStop(0, '#478CFB'); //цвет мышки
-                grad.addColorStop(1, ['rgb(', (150 - xc), ', ', xc, ', ', yc, ')'].join(''));
+                grad = ctx[i].createLinearGradient(0, 0, 255, 0);
+                grad.addColorStop(0, el.attr("data-start") );
+                grad.addColorStop(1, el.attr("data-end") );
 
                 ctx[i].fillStyle = grad;
                 ctx[i].fillRect(0,0,width,height);
@@ -169,12 +161,6 @@ var $example = $('#slider'),
 
 $(document).ready(function(){
     if( $(".b-sub-menu canvas").length ){
-        // function resize(){
-        //     $("ul.slideelement li").css("width",$("body").width()+);       
-        // }
-        // $(window).resize(resize);
-        // resize();
-
         var grad = null,
             body = document.getElementsByTagName('body')[0],
             color = 255,
@@ -187,15 +173,10 @@ $(document).ready(function(){
             ctx[i].clearRect(0, 0, 1280, 1280);
             ctx[i].save();
 
-            // сам фон-градиент
             ctx[i].fillStyle = grad;
         }
 
         updateGradient1(window.innerWidth/3,window.innerHeight/2);
-
-        // body.onmousemove = function (event) {
-        //     updateGradient1(event.clientX,event.clientY);
-        // };
 
         $(".b-sub-menu").mousemove(function(e){
             var mX = event.clientX,
@@ -207,18 +188,11 @@ $(document).ready(function(){
             console.log(p);
         });
 
-        function updateGradient1(xx,yy){
+        function updateGradient1(){
             for( var i = 0 ; i < $(".b-sub-menu canvas").length ; i++ ){
                 var width = window.innerWidth, 
-                    height = window.innerHeight, 
-                    x = xx, 
-                    y = yy,
-                    rx = x,
-                    ry = y;
-                    
-                var xc = ~~(256 * x / width);
-                var yc = ~~(256 * y / height);
-                console.log(width);
+                    height = window.innerHeight;
+
                 grad = ctx[i].createLinearGradient(0, 0, 255, 0);  //размер мышки
                 grad.addColorStop(0, 'rgb(87, 223, 137)');
                 grad.addColorStop(0.20, 'rgb(63, 221, 215)');
@@ -226,9 +200,6 @@ $(document).ready(function(){
                 grad.addColorStop(0.60, 'rgb(104, 54, 228)');
                 grad.addColorStop(0.75, 'rgb(147, 59, 228)');
                 grad.addColorStop(1, 'rgb(216, 64, 246)');
-                // grad.addColorStop(0, ['rgb(', ~~(yc/2)+50, ', ', (255 - xc), ', ', xc, ')'].join(''));
-                // grad.addColorStop(0.5, ['rgb(', xc, ', ', ~~(yc/2)+50, ', ', (255 - xc), ')'].join(''));
-                // grad.addColorStop(1, ['rgb(', (255 - xc), ', ', xc, ', ', ~~(yc/2)+50, ')'].join(''));
 
                 ctx[i].fillStyle = grad;
                 ctx[i].fillRect(0,0,width,height);
