@@ -354,13 +354,12 @@ ul.hor li {
 		}
 		.b-header .b-block .b-orange-butt:active {
 			margin-top: 1px !important;
-			margin-bottom: 1px !important;
 		}
 .b-slider {
 
 }
 .b-slider .mightyslider_modern_skin{
-	/*background-color: #FFF;*/
+
 }
 .b-slider .mightySlider {
 	width: 100%;
@@ -617,7 +616,36 @@ ul.hor li {
 								font-size: 20px;
  								position: relative;
  								left: 3px;
+ 								font-family: "PNL";
 							}
+								.b-classification .b-block ul li .b-desc-cont h4 small:after{
+									display: block;
+  									color: #fff;
+  									position: absolute;
+  									content: "-";
+  									font-size: 0px;
+  									font-weight: 300;
+  									width: 7px;
+  									top: 14px;
+  									left: 0;
+  									z-index: 1;
+  									height: 2px;
+  									background: #FFF;
+								}
+								.b-classification .b-block ul li .b-desc-cont h4 small:before{
+									display: block;
+  									color: #fff;
+  									position: absolute;
+  									content: "-";
+  									font-size: 0px;
+  									font-weight: 300;
+  									width: 4px;
+  									top: 11px;
+  									left: 0;
+  									z-index: 1;
+  									height: 2px;
+  									background: #FFF;
+								}
 							.b-classification .b-block ul li .b-desc-cont h4 div{
 								display: inline;
 							}
@@ -906,6 +934,26 @@ ul.hor li {
 				}
 					.b-about .b-block ul li div div{
 						display: inline-block;
+					}
+					.b-about .b-block ul li div img{
+						display: none;
+					}
+					.b-about .b-block ul.ie9 li div div{
+						display: none;
+					}
+					.b-about .b-block ul.ie9 li div img{
+						display: inline-block;
+					}
+					ul.ie9 li div img.svg-anim {
+						opacity: 0;
+						-webkit-transition: all 500ms ease-in;
+						   -moz-transition: all 500ms ease-in;
+						    -ms-transition: all 500ms ease-in;
+						   	 -o-transition: all 500ms ease-in;
+								transition: all 500ms ease-in;
+					}
+					ul.ie9 li div img.svg-anim-show {
+						opacity: 1;
 					}
 					.b-about .b-block ul li div #iphone{
 						margin-top: 2px;

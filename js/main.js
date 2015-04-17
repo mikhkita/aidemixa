@@ -156,6 +156,14 @@ var $example = $('#slider'),
         TweenLite.to($(this).find("a"), 0.3, { "top" : -283, ease : Quad.easeInOut } );
     });
 
+    function isIE () {
+        var myNav = navigator.userAgent.toLowerCase();
+        return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+    }
+    if (isIE () == 9) {
+        $(".b-about ul").addClass("ie9");
+    }
+
 });
 
 
