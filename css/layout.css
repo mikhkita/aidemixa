@@ -1503,7 +1503,8 @@ ul.hor li {
 			.b-contacts .b-block .contacts .left>a:after,
 			.b-contacts .b-block .contacts .left>div:after,
 			.b-contacts .b-block .contacts .right h3:after,
-			.b-contacts .b-block .contacts .right h4:after{
+			.b-contacts .b-block .contacts .right h4:after,
+			.b-contacts .b-block .contacts .left .fb:after{
 				display: block;
   				color: #fff;
   				position: absolute;
@@ -1547,6 +1548,7 @@ ul.hor li {
   				background-image: url('../i/b-contacts/c-skype.png');
 			}
 			.b-contacts .b-block .contacts .left .fb {
+				position: relative;
 				color: #4B4B4B;
 			}
 			.b-contacts .b-block .contacts .left .fb:after{
