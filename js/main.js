@@ -158,7 +158,7 @@ var $example = $('#slider'),
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             disableDefaultUI: true,
             scrollwheel: false,
-            zoomControl: false,
+            zoomControl: true,
             zoomControlOptions: {
                 style: google.maps.ZoomControlStyle.LARGE,
                 position: google.maps.ControlPosition.LEFT_CENTER
