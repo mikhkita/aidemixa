@@ -54,7 +54,7 @@
          url('../fonts/proximanovacond-bold.woff2') format('woff2'),
          url('../fonts/proximanovacond-bold.woff') format('woff'),
          url('../fonts/proximanovacond-bold.ttf') format('truetype'),
-         url('../fonts/proximanovacond-bold.svg#proxima_nova_cn_rgbold') format('svg');
+         url('../fonts/proximanovacond-bold.svg#PNCB') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -66,7 +66,7 @@
          url('../fonts/opensans-light.woff2') format('woff2'),
          url('../fonts/opensans-light.woff') format('woff'),
          url('../fonts/opensans-light.ttf') format('truetype'),
-         url('../fonts/opensans-light.svg#open_sanslight') format('svg');
+         url('../fonts/opensans-light.svg#OSL') format('svg');
     font-weight: normal;
     font-style: normal;
 
