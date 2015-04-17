@@ -494,6 +494,9 @@ ul.hor li {
 	padding-top: 70px;
 	padding-bottom: 70px;
 }
+.b-projects-page{
+	padding-top: 30px;
+}
 	.b-projects .b-block {
 
 	}
@@ -502,17 +505,19 @@ ul.hor li {
 		}
 		.b-projects .b-block ul{
 			margin-bottom: 14px;
+			font-size: 0px;
 		}
 			.b-projects .b-block ul li{
 				overflow: hidden;
-				/*width: 33.333333%;*/
 				margin-bottom: 72px;
 				font-size: 0px;
 				position: relative;
 				cursor: pointer;
 				margin-right: 51px;
+				display: inline-block;
 			}
-			.b-projects .b-block ul li:nth-child(3n){
+			.b-projects .b-block ul li:nth-child(3n),
+			.b-projects .b-block ul li:last-child{
 				margin-right: 0;
 			}
 				.b-projects .b-block ul li img{
@@ -946,15 +951,10 @@ ul.hor li {
 					}
 					ul.ie9 li div img.svg-anim {
 						opacity: 0;
-						-webkit-transition: all 500ms ease-in;
-						   -moz-transition: all 500ms ease-in;
-						    -ms-transition: all 500ms ease-in;
-						   	 -o-transition: all 500ms ease-in;
-								transition: all 500ms ease-in;
 					}
-					ul.ie9 li div img.svg-anim-show {
+/*					ul.ie9 li div img.svg-anim-show {
 						opacity: 1;
-					}
+					}*/
 					.b-about .b-block ul li div #iphone{
 						margin-top: 2px;
   						margin-left: 2px;

@@ -167,5 +167,8 @@ $(document).ready(function(){
     custom["svgAnim"] = function(el){
         el.lazylinepainter('paint');
     }
+    custom["svg-anim"] = function(el){
+        TweenLite.to(el, 0.8, { "opacity" : 1, ease : Quad.easeInOut } );
+    }
 
 });

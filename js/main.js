@@ -106,7 +106,7 @@ var $example = $('#slider'),
                     width = el.width()+20, 
                     height = el.height();
 
-                grad = ctx[i].createLinearGradient(0, 0, 255, 0);
+                grad = ctx[i].createLinearGradient(0, 0, 300, 0);
                 grad.addColorStop(0, el.attr("data-start") );
                 grad.addColorStop(1, el.attr("data-end") );
 
@@ -156,12 +156,13 @@ var $example = $('#slider'),
         TweenLite.to($(this).find("a"), 0.3, { "top" : -283, ease : Quad.easeInOut } );
     });
 
-    function isIE () {
+    if (isIE() == 9) {
+        $(".b-about ul").addClass("ie9");
+    }
+
+    function isIE() {
         var myNav = navigator.userAgent.toLowerCase();
         return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
-    }
-    if (isIE () == 9) {
-        $(".b-about ul").addClass("ie9");
     }
 
 });
