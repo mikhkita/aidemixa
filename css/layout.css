@@ -40,6 +40,30 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'PNSB';
+    src: url('../fonts/proxima_nova_semibold.eot');
+    src: url('../fonts/proxima_nova_semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima_nova_semibold.woff2') format('woff2'),
+         url('../fonts/proxima_nova_semibold.woff') format('woff'),
+         url('../fonts/proxima_nova_semibold.ttf') format('truetype'),
+         url('../fonts/proxima_nova_semibold.svg#proxima_nova_ltsemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'OSL';
+    src: url('../fonts/opensans-light.eot');
+    src: url('../fonts/opensans-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-light.woff2') format('woff2'),
+         url('../fonts/opensans-light.woff') format('woff'),
+         url('../fonts/opensans-light.ttf') format('truetype'),
+         url('../fonts/opensans-light.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html,
 body {
@@ -158,7 +182,9 @@ ul.hor li {
 		color: #FFF;
 	}
 	.b-orange-butt:active{
-		border-bottom: 3px solid #35CFFA !important;
+		border-bottom: none;
+	margin-top: 2px;
+	margin-bottom: 1px;
 	}
 .map-point {
 	color: #fff;
@@ -168,12 +194,22 @@ ul.hor li {
 .fancybox-close {
 	display: none;
 }
+.fancybox-skin {
+	background: none;
+}
+.fancybox-opened .fancybox-skin {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
 .b-popup {
 	width: 349px;
 	padding: 22px 56px 39px;
 	background: #FFFFFF;
 	box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15), inset 0px -3px 0px 0px rgba(0,0,0,0.20);
 	border-radius: 4px;
+	position: relative;
+    margin-bottom: 30px;
 }
 	.b-popup h3{
 	font-size: 24px;
@@ -254,9 +290,8 @@ ul.hor li {
 			padding-left: 12px;
 		}
 			.b-header .b-block .b-menu li{
-				font-family: "PNR";
+				font-family: "PNSB";
 				text-transform: uppercase;
-				/*font-weight: 700;*/
 				font-size: 14px;
 				margin-right: 10px;
 				letter-spacing: 0.8px;
@@ -545,18 +580,19 @@ ul.hor li {
 						border-radius: 8px 6px 0 0;
 					}
 						.b-classification .b-block ul li div h3{
+							font-family: "PNSB";
 							display: inline-block;
 						  	text-transform: uppercase;
 						  	font-size: 12px;
 						  	letter-spacing: 4.06px;
-						  	border: 1px solid rgba(255,255,255,0.33);
-						  	border-radius: 20px;
+						  	border: 2px solid rgba(255,255,255,0.33);
+						  	border-radius: 40px;
 						  	margin-top: 36px;
-						  	padding: 6px 12px;
+						  	padding: 6px 10px 5px;
 						}	
 						.b-classification .b-block ul li div h4{
 							font-size: 37px;
-							font-family: "PNB";
+							font-family: "PNSB";
 							margin-top: 29px;
 						}
 							.b-classification .b-block ul li div h4 span{
@@ -761,10 +797,13 @@ ul.hor li {
 				font-size: 26px;
 			}
 			.b-footer .b-block .contacts .right .b-orange-butt{
-				width: 178px;
-				text-align: center;
+				width: 208px;
+  				text-align: center;
   				margin-right: 123px;
- 				margin-top: 45px;
+  				margin-top: 45px;
+  				font-size: 14px;
+  				font-family: "PNSB";
+  				padding: 15px 0 13px;
 			}
 			.b-footer .b-block h5{
 
@@ -785,7 +824,6 @@ ul.hor li {
 		top: 12px;
 	}
 		.b-sub-menu .b-block ul{
-			/*margin-left: 205px;*/
 			display: inline-block;
 			margin-left: 50px;
 		}
@@ -796,6 +834,7 @@ ul.hor li {
 				display: block;
 				color: #fff;
 			  	text-transform: uppercase;
+			  	font-family: "PNSB";
 			  	font-size: 14px;
 			  	letter-spacing: 2.49px;
 				line-height: 17px;
@@ -807,7 +846,7 @@ ul.hor li {
 				}
 			.b-sub-menu .b-block ul li.active a{
 				border: 2px solid rgba(255,255,255,0.40);
-			  	padding: 9px 22px;
+			  	padding: 10px 22px 8px;
 			  	cursor: default;
 			}
 				.b-sub-menu .b-block ul li.active a:hover{
@@ -823,6 +862,7 @@ ul.hor li {
 			margin-bottom: 50px;
 		}
 		.b-about .b-block h3{
+			font-family: "OSL";
 			color: #4F4F4F;
 			font-size: 27px;
 			margin-bottom: 50px;
@@ -836,11 +876,13 @@ ul.hor li {
 			display: inline-block;
 		}	
 			.b-about .b-block ul li{
-				width: 240px;
-				height: 315px;
-				margin: 0 39px 107px;
+				width: 298px;
+  				height: 315px;
+  				margin: 0 11px 107px;
 			}
-
+				.b-about .b-block ul li h5{
+				font-size: 16px;
+				}
 				.b-about .b-block ul li div{
 					width: 100%;
   					height: 181px;
@@ -907,12 +949,13 @@ ul.hor li {
 		}
 		.b-comments .mightySlider .mSCaption .comment-cont{
   			display: table;
+  			margin-bottom: 10px;
 		}
 			.b-comments .mightySlider .photo{
 				width: 100px;
   				height: 100px;
   				border-radius: 50px;
-  				background: url("../i/b-projects/2.jpg") no-repeat;
+  				background: url("../i/b-4/2.jpg") no-repeat;
   				background-position: 50%;
   				background-size: cover;
   				display: table-cell;
@@ -925,10 +968,12 @@ ul.hor li {
 				display: table-cell;
 				font-size: 18px;
 				vertical-align: middle;
+				line-height: 26px;
 			}
 		.b-comments .mightySlider h4{
+			text-align: left;
 			font-size: 16px;
-			font-family: "PNB";
+			font-family: "PNSB";
 			margin-left: 125px;
 		}
 		.b-comments .mightyslider_modern_skin.horizontal .mSPrev {
@@ -1173,29 +1218,27 @@ ul.hor li {
 				height: auto;
 			}
 			.b-slider-project .mightyslider_modern_skin .mSPages li{
-				width: 31px !important;
+				width: 31px !important;	
 				height: 37px !important;
 				border: 0px;
 				background-color: #fff;
 				opacity: 1;
 				margin-top: 0px;
-				background-size: contain;
-				background-position: 50%;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-    			filter: gray; /* IE6-9 */
-    			-webkit-filter: grayscale(100%);
-
+				background-repeat: no-repeat;
+				background-size: auto 37px;
+				background-position: 100% 50%;
+				
 			}
 			.b-slider-project .mightyslider_modern_skin .mSPages li:nth-child(1){
+				width: 29px !important;
 				background-image: url("../i/project/apple.png");
 			}
-			.b-slider-project .mightyslider_modern_skin .mSPages li:nth-child(2){		
+			.b-slider-project .mightyslider_modern_skin .mSPages li:nth-child(2){	
 				background-image: url("../i/project/android.png");
 				
 			}
 			.b-slider-project .mightyslider_modern_skin .mSPages li.active{
-				-webkit-filter: grayscale(0);
-  				filter: none;
+				background-position: 0% 50%;
 			}
 .b-prj-desc {
 	padding-top: 50px;
