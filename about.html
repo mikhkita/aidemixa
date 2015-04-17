@@ -18,6 +18,7 @@
 
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="js/smil.user.js"></script>
 	<script type="text/javascript" src="js/TweenMax.min.js"></script>
 	<script type="text/javascript" src="js/swipe.js"></script>
 	<script type="text/javascript" src="js/jquery.lazylinepainter-1.5.1.js"></script>
@@ -153,7 +154,6 @@
 				</ul>
 			</div>
 		</div>
-		
 	</div>
 	<div class="b b-clients">
 		<div class="b-block">
@@ -200,8 +200,13 @@
 	<div class="b b-map-cont">
 		<h2>География клиентов</h2>	
 		<div class="b-map" id="map_canvas"></div>
+		<ul style="display: none;" id="b-map-points">
+			<li data-name="Томск" data-point="56.433537,84.988520"></li>
+			<li data-name="Москва" data-point="55.769229,37.723798"></li>
+			<li data-name="Санкт-Петербург" data-point="59.904430,30.384931"></li>
+		</ul>
 	</div>
-	<div class="b b-7">
+	<div class="b b-footer">
 		<div class="b-block">
 			<h2>Контакты</h2>
 			<div class="contacts clearfix">

@@ -126,47 +126,38 @@ var $example = $('#slider'),
 
 
 
-    var myPlace = new google.maps.LatLng(51.638608, 6.619120);
-    var myOptions = {
-        zoom: 3,
-        center: myPlace,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        disableDefaultUI: true,
-        scrollwheel: false,
-        zoomControl: false,
-        zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.LARGE,
-            position: google.maps.ControlPosition.LEFT_CENTER
+    if( $("#map_canvas").length ){
+        var myPlace = new google.maps.LatLng(51.638608, 6.619120);
+        var myOptions = {
+            zoom: 3,
+            center: myPlace,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            disableDefaultUI: true,
+            scrollwheel: false,
+            zoomControl: false,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.LARGE,
+                position: google.maps.ControlPosition.LEFT_CENTER
+            }
+        }
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+
+        if( $("#b-map-points").length ){
+            $("#b-map-points li").each(function(){
+                var points = $(this).attr("data-point").split(",");
+
+                var marker = new MarkerWithLabel({
+                   position: new google.maps.LatLng(points[0]*1, points[1]*1),
+                   map: map,
+                   icon: "/bitrix/templates/main/i/map-point.png",
+                   labelContent: $(this).attr("data-name"),
+                   labelAnchor: new google.maps.Point(-10, 16),
+                   labelClass: "map-point"
+                });
+            });
         }
     }
-    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
-
-    var marker = new MarkerWithLabel({
-       position: new google.maps.LatLng(56.433537, 84.988520),
-       map: map,
-       icon: "i/map-point.png",
-       labelContent: "Томск",
-       labelAnchor: new google.maps.Point(-10, 16),
-       labelClass: "map-point"
-    });
-    marker = new MarkerWithLabel({
-       position: new google.maps.LatLng(55.769229, 37.723798),
-       map: map,
-       icon: "i/map-point.png",
-       labelContent: "Москва",
-       labelAnchor: new google.maps.Point(-10, 16),
-       labelClass: "map-point"
-    });
-    marker = new MarkerWithLabel({
-       position: new google.maps.LatLng(59.904430, 30.384931),
-       map: map,
-       icon: "i/map-point.png",
-       labelContent: "Санкт-Петербург",
-       labelAnchor: new google.maps.Point(-10, 16),
-       labelClass: "map-point"
-    });
-
-
+    
 });
 
 

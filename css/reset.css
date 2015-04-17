@@ -41,6 +41,10 @@ table
 {
 	text-align: right;	
 }
+.tleft
+{
+	text-align: left;	
+}
 .tcenter
 {
 	text-align: center;
