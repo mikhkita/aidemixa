@@ -1238,7 +1238,6 @@ ul.hor li {
 	}
 	.b-slider-project .mightySlider {
 		width: 100%;
-		height: 615px;
 	}
 		.b-slider-project .mightySlider ul.slideelement{
 			height: 100%;
@@ -1249,19 +1248,25 @@ ul.hor li {
 				height: 100%;
 			}
 			.b-slider-project .mightySlider .mSCaption{
+				height: 100%;
 				width: 960px;
 				left: 50%;
 	  			margin-left: -480px;
 	  			color: #000;
 			}
-			.b-slider-project .mightySlider .mSCaption .slide{
-	  			width: 959px;
-				height: 524px;
-				background: url("../i/project/iphone-slider.jpg") no-repeat;
-				background-position: 50%;
-				background-size: contain;
-	  			
-			}
+				.b-slider-project .mightySlider .mSCaption .b-table{
+					display: table;
+					height: 100%;
+				}
+					.b-slider-project .mightySlider .mSCaption .b-table .b-table-cell{
+						display: table-cell;
+						vertical-align: middle;
+						height: 100%;
+					}
+						.b-slider-project .mightySlider .mSCaption .b-table .b-table-cell img{
+				  			font-size: 0;
+				  			max-width: 100%;
+						}
 			.b-slider-project .mightyslider_modern_skin.horizontal .mSPrev {
 				background: url("../i/project/arrow-l.png") no-repeat;
 				margin-left: -530px;
@@ -1275,7 +1280,7 @@ ul.hor li {
 				background-size: auto 40px;
 				background-position: 0% 50%;
 				left: 50%;
-				top: -95px;
+				top: 0px;
 				width: 21px;
 				opacity: 1;
 			}
@@ -1284,7 +1289,7 @@ ul.hor li {
 				background-position: 100% 50%;
 			}
 			.b-slider-project .mightyslider_modern_skin .mSPages{
-				bottom: 0 !important;
+				bottom: -55px !important;
 				height: auto;
 			}
 			.b-slider-project .mightyslider_modern_skin .mSPages li{
