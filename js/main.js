@@ -150,6 +150,30 @@ var $example = $('#slider'),
         }
     }
 
+    if( $("#b-contacts-map").length ){
+        var myPlace = new google.maps.LatLng(56.474881, 84.988611);
+        var myOptions = {
+            zoom: 17,
+            center: myPlace,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            disableDefaultUI: true,
+            scrollwheel: false,
+            zoomControl: false,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.LARGE,
+                position: google.maps.ControlPosition.LEFT_CENTER
+            }
+        }
+        var map = new google.maps.Map(document.getElementById("b-contacts-map"), myOptions); 
+        var marker = new MarkerWithLabel({
+                   position: new google.maps.LatLng(56.474703, 84.988482),
+                   map: map,
+                   labelContent: "ул. Герцена, 74/2",
+                   labelAnchor: new google.maps.Point(-10, 7),
+                   labelClass: "contacts-map-point"
+                });
+    }
+
     $(".b-projects .b-block ul li").hover(function(){
         TweenLite.to($(this).find("a"), 0.3, { "top" : 0, ease : Quad.easeInOut } );
     },function(){
