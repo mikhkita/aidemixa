@@ -1005,6 +1005,7 @@ ul.hor li {
 			height: 100%;
 		}
 		.b-comments .mightySlider .mSCaption{
+			height: 100%;
 			width: 800px;
 			left: 50%;
   			margin-left: -400px;
@@ -1018,10 +1019,14 @@ ul.hor li {
   				display: table-cell;
   				vertical-align: middle;
 			}
+			.b-comments .mightySlider .comment-cont>div:first-child{
+				vertical-align: top;
+			}
 				.b-comments .mightySlider .comment-cont div img {
 					width: 100px;
   					height: 100px;
   					border-radius: 50px;
+  					margin-top: 5px;
 				}
 				.b-comments .mightySlider .comment-cont div:nth-child(2){
 					width: 700px;
@@ -1032,12 +1037,13 @@ ul.hor li {
 						font-size: 18px;
 						line-height: 26px;
 					}
-		.b-comments .mightySlider h4{
-			text-align: left;
-			font-size: 16px;
-			font-family: "PNS";
-			margin-left: 125px;
-		}
+					.b-comments .mightySlider h4{
+						/*margin-top: 15px;*/
+						text-align: left;
+						font-size: 16px;
+						font-family: "PNS";
+						margin-left: 125px;
+					}
 		.b-comments .mightyslider_modern_skin.horizontal .mSPrev {
 			background: url("../i/arrow-l.png") no-repeat;
 			margin-left: -480px;
@@ -1050,17 +1056,25 @@ ul.hor li {
 		.b-comments .mightyslider_modern_skin.horizontal .mSPrev,
 		.b-comments .mightyslider_modern_skin.horizontal .mSNext{
 			background-size: auto 50px;
-			background-position: 0% 50%;
-			left: 50%;
-			width: 26px;
-			top: -140px;
-			opacity: 1;
+  			background-position: 0% 50%;
+  			left: 50%;
+  			width: 26px;
+  			top: 50%;
+  			opacity: 1;
+  			margin-top: -155px;
 		}
 		.b-comments .mightyslider_modern_skin.horizontal .mSPrev:hover,
 		.b-comments .mightyslider_modern_skin.horizontal .mSNext:hover {
 			background-position: 100% 50%;
 		}
-
+		#slider-comments .b-table{
+			display: table;
+			height: 100%;
+		}
+			#slider-comments .b-table-cell{
+				display: table-cell;
+				vertical-align: middle;
+			}
 .b-team {
 	padding-top: 70px;
 	padding-bottom: 116px;
@@ -1608,7 +1622,6 @@ ul.hor li {
 		text-align: left;
 	}
 		.b-copyright .b-block h3{
-
 			font-size: 12px;
 			color: rgba(0,0,0,0.42);
 			margin-left: 5px;

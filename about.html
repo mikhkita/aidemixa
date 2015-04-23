@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/mightyslider.css"/>
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
+	<link rel="stylesheet" href="css/about.css" type="text/css">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 
 	<meta name="viewport" content="width=1000">
@@ -32,17 +33,54 @@
 	<script type="text/javascript" src="js/KitAnimate.js"></script>
 	<script type="text/javascript" src="js/device.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
+	<script>
+	$(document).ready(function(){
+		var a = [100,200,100,150,70],
+			b = [30,200,200,200,100],
+			iA = 400,
+			iB = 500,
+			r = [0.05,0.1,0.15],
+			PDV = [];
+		for( var j in r ){
+			j *= 1;
+			var tmpR = r[j],
+				tmpArr = [];
+			for( var i in a ){
+				i *= 1;
+				tmpArr.push((1/ Math.pow(1+tmpR,i+1) ));
+			}
+			PDV.push(tmpArr);
+		}
+		console.log(PDV);
+
+		var NPV = [];
+
+		for( var i in PDV ){
+			i *= 1;
+			var sum = 0;
+			for( var j in PDV[i]){
+				sum += PDV[i][j]*b[j];
+				console.log(PDV[i][j]*b[j]);
+			}
+			sum -= iB;
+			NPV.push(sum);
+		}
+		console.log(NPV);
+	});
+
+	</script>
 	
 	<script type="text/javascript" src="js/about.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
+	<div class="b-my-cont"></div>
 	<ul class="ps-lines">
 		<li class="v" style="margin-left:-481px"></li>
 		<li class="v" style="margin-left:480px"></li>
 		<li class="v" ></li>
 	</ul>
-	<div class="b b-1">
+	<div class="b b-header">
 		<div class="b-block clearfix">
 			<div class="b-logo-cont">
 				<a href="#">
@@ -67,6 +105,7 @@
 	</div>
 	<div class="b-sub-menu">  
 		<canvas></canvas>
+		<div class="b-hover-block" id="b-hov"></div>
 		<div class="b-block b-absolute">
 			<ul class="clearfix hor">
 				<li class="active"><a href="#">О компании</a></li>
