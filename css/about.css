@@ -1,0 +1,24 @@
+.b-sub-menu .b-block ul{
+	padding-top: 1px;
+}
+.b-sub-menu canvas{
+	height: 64px;
+}
+.b-sub-menu .b-block ul li a:hover{
+	text-decoration: none;
+}
+.b-sub-menu .b-block ul li.active a {
+  	border: 0px solid rgba(255,255,255,0.40);
+  	padding: 11px 24px 8px;
+  	cursor: default;
+}
+	.b-hover-block{
+		position: absolute;
+		left: 0px;
+		top: 13px;
+		border: 2px solid rgba(255,255,255,0.40);
+		height: 17px;
+		padding: 10px 0px 8px 0px;
+		margin-left: -3px;
+  		border-radius: 40px;
+	}
