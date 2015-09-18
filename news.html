@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="keywords" content=''>
+	<meta name="description" content=''>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mightyslider.css"/>
+	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
+	<link rel="stylesheet" href="css/layout.css" type="text/css">
+	<link rel="stylesheet" href="css/about.css" type="text/css">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+
+	<meta name="viewport" content="width=1000">
+
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="js/smil.user.js"></script>
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/swipe.js"></script>
+	<script type="text/javascript" src="js/jquery.lazylinepainter-1.5.1.js"></script>
+	<script type="text/javascript" src="js/carousel.lite.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="js/markerwithlabel.js"></script>
+	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/mightyslider.min.js"></script>
+	<script type="text/javascript" src="js/KitProgress.js"></script>
+	<script type="text/javascript" src="js/KitAnimate.js"></script>
+	<script type="text/javascript" src="js/device.js"></script>
+	<script type="text/javascript" src="js/KitSend.js"></script>
+	<script>
+	$(document).ready(function(){
+		var a = [100,200,100,150,70],
+			b = [30,200,200,200,100],
+			iA = 400,
+			iB = 500,
+			r = [0.05,0.1,0.15],
+			PDV = [];
+		for( var j in r ){
+			j *= 1;
+			var tmpR = r[j],
+				tmpArr = [];
+			for( var i in a ){
+				i *= 1;
+				tmpArr.push((1/ Math.pow(1+tmpR,i+1) ));
+			}
+			PDV.push(tmpArr);
+		}
+		console.log(PDV);
+
+		var NPV = [];
+
+		for( var i in PDV ){
+			i *= 1;
+			var sum = 0;
+			for( var j in PDV[i]){
+				sum += PDV[i][j]*b[j];
+				console.log(PDV[i][j]*b[j]);
+			}
+			sum -= iB;
+			NPV.push(sum);
+		}
+		console.log(NPV);
+	});
+
+	</script>
+	
+	<script type="text/javascript" src="js/about.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<div class="b-my-cont"></div>
+	<ul class="ps-lines">
+		<li class="v" style="margin-left:-481px"></li>
+		<li class="v" style="margin-left:480px"></li>
+		<li class="v" ></li>
+	</ul>
+	<div class="b b-header">
+		<div class="b-block clearfix">
+			<div class="b-logo-cont">
+				<a href="#">
+					<img src="i/logo.png" width="183" height="32" alt="">
+				</a>
+			</div>
+			<div style="width:375px;">
+				<ul class="b-menu clearfix hor">
+					<li><a href="#"><p>компания<br><span>компания</span></p></a></li>
+					<li><a href="#"><p>портфолио<br><span>портфолио</span></p></a></li>
+					<li><a href="#"><p>контакты<br><span>контакты</span></p></a></li>
+				</ul>
+			</div>
+			<div class="b-date-cont">
+				<h3>+7 (3822) 222 137</h3>
+				<a href="mailto:info@aximediasoft.com">info@aximediasoft.com</a>
+			</div>
+			<div class="b-butt-cont">
+			<a href="#" data-block="#b-popup-1" class="fancy right b-get-callback b-orange-butt">Заказать оценку</a>
+			</div>
+		</div>
+	</div>
+	<div class="b-sub-menu">  
+		<canvas></canvas>
+		<div class="b-hover-block" id="b-hov"></div>
+		<div class="b-block b-absolute">
+			<ul class="clearfix hor">
+				<li><a href="#">О компании</a></li>
+				<li class="active"><a href="#">Новости</a></li>
+				<li><a href="#">Сотрудники</a></li>
+				<li><a href="#">Как мы работаем</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="b b-news">
+		<div class="b-block">
+			<h2>Новости</h2>
+			<!-- <ul class="news-years clearfix">
+				<li class="active"><a href="#">2016</a></li>
+				<li><a href="#">2015</a></li>
+				<li><a href="#">2014</a></li>
+			</ul> -->
+			<ul class="news-tag clearfix">
+				<li>#тег<span></span></li>
+			</ul>
+			<div class="news-cont clearfix">
+				<h4 class="left">17 сентября 2015</h4>
+				<div class="news left">
+					<h3>Неизменный социализм: гипотеза и теории</h3>
+					<p>Манерничанье многопланово ограничивает незначительный горизонт ожидания. Художественное опосредование, в том числе, косвенно. Политическое учение Локка многопланово дает кризис легитимности. Весьма существенно следующее: синтаксис искусства иллюстрирует экзистенциальный политический процесс в современной России.</p>
+					<ul class="tags clearfix">
+						<li><a href="#">#манерничанье,</a></li>
+						<li><a href="#">#ожидания,</a></li>
+						<li><a href="#">#художественное опосредование,</a></li>
+						<li><a href="#">#политическое учение Локка</a></li>  
+					</ul>
+					<a class="detail" href="#">Посмотреть полностью</a>
+				</div>
+			</div>
+			<div class="news-cont clearfix">
+				<h4 class="left">17 сентября 2015</h4>
+				<div class="news left">
+					<h3>Гравитационный кожух: методология и особенности</h3>
+					<p>МИсходя из астатической системы координат Булгакова, надолба однородно адсорбирует антропологический собственный кинетический момент, что-то подобное можно встретить в работах Ауэрбаха и Тандлера. Лесополоса безусловно окисляет невротический центр сил. Беспристрастный анализ любого творческого акта показывает, что супесь ортогонально просветляет ритм, перейдя к исследованию устойчивости линейных гироскопических систем с искусственными силами.</p>
+					<ul class="tags clearfix">
+						<li><a href="#">#манерничанье,</a></li>
+						<li><a href="#">#ожидания,</a></li>
+						<li><a href="#">#художественное опосредование,</a></li>
+						<li><a href="#">#политическое учение Локка</a></li>  
+					</ul>
+					<a class="detail" href="#">Посмотреть полностью</a>
+				</div>
+			</div>
+			<div class="pagination clearfix">
+				<span class="prev left">Сюда</span>
+				<ul class="clearfix left">
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+				</ul>
+				<span class="next left">Туда</span>
+			</div>
+		</div>
+	</div>
+	<div class="b b-footer">
+		<div class="b-block">
+			<h2>Контакты</h2>
+			<div class="contacts clearfix">
+				<div class="left">
+					<a class="mail-1" href="mailto:info@aximediasoft.com">info@aximediasoft.com</a>
+					<p class="mail-2">для резюме: <a href="mailto:job@aximediasoft.com">job@aximediasoft.com</a></p>
+					<a class="skype" href="skype:sapunkov_gleb?call"><span>s</span>sapunkov_gleb</a>
+					<a class="map" href="#">Россия, г. Томск, ул. Герцена, 74/2</a>
+					<a class="fb" href="#">Мы в Facebook</a>
+				</div>
+				<div class="right">
+					<h3>Отвечаем на звонки с 6:00 до 18:00 МСК</h3>
+					<h4>+7 (3822) 222 137</h4>
+					<a href="#" data-block="#b-popup-1" class="fancy right b-get-callback b-orange-butt">Заказать оценку</a>
+				</div>
+			</div>
+			<h5 class="clearfix">© 2010–2015 Aximedia Soft. Все права защищены</h5>
+		</div>
+	</div>
+	<div class="b b-8">
+		<div class="b-block">
+			
+		</div>
+	</div>
+	<div class="b b-9">
+		<div class="b-block">
+			
+		</div>
+	</div>
+<div style="display:none;">
+	<div id="b-popup-1">
+			<div class="for_all b-popup" >
+				<h3>Оставьте заявку</h3>
+				<h4>и наши специалисты<br>свяжутся с Вами в ближайшее время</h4>
+				<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-1">
+					<div class="b-popup-form">
+						<label for="name">Введите Ваше имя</label>
+						<input type="text" id="name" name="name" required/>
+						<label for="tel">Введите Ваш номер телефона</label>
+						<input type="text" id="tel" name="phone" required/>
+						<input type="hidden" name="subject" value="Заказ"/>
+						<input type="submit" class="ajax b-orange-butt" value="Заказать">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="b-popup-2">
+			<div class="b-thanks b-popup">
+				<h3>Спасибо!</h3>
+				<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в течение часа.</h4>
+				<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			</div>
+		</div>
+		<div id="b-popup-error">
+			<div class="b-thanks b-popup">
+				<h3>Ошибка отправки!</h3>
+				<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
+				<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
